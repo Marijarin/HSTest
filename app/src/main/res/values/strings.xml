@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HSTest</string>
+    <string name="ads">advertisements</string>
+    <string name="qr">QR</string>
+    <string name="msc">Москва</string>
+    <string name="choose_city">Выберите город</string>
+    <string name="it_is_a_bin_fragment">It is a bin fragment</string>
+    <string name="it_is_a_profile_fragment">It is a profile fragment</string>
+    <string name="title_main_page">Меню</string>
+    <string name="title_user_page">Профиль</string>
+    <string name="title_bin">Корзина</string>
+    <string name="price">от %s р</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainPageFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_menu"
+        android:title="@string/title_main_page" />
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="@string/title_user_page" />
+    <item
+        android:id="@+id/binFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_bin"
+        android:title="@string/title_bin"
+        android:titleCondensed="@drawable/ic_nav_bin" />
+
+</menu>

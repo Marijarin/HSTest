@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.hstest.presentation.main.MainPageFragment"
+        android:label="@string/title_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_binFragment"
+            app:destination="@id/binFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/binFragment"
+        android:name="com.example.hstest.presentation.bin.BinFragment"
+        android:label="@string/title_bin" >
+        <action
+            android:id="@+id/action_binFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+        <action
+            android:id="@+id/action_binFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.hstest.presentation.profile.ProfileFragment"
+        android:label="@string/title_user_page" >
+        <action
+            android:id="@+id/action_profileFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_binFragment"
+            app:destination="@id/binFragment" />
+    </fragment>
+</navigation>
