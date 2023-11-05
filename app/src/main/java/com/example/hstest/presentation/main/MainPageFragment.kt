@@ -57,7 +57,7 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
                 viewModel.data.collectLatest { list ->
                     adapter.submitList(list)
                     list.map { dish ->
-                       dish.strCategory
+                        dish.strCategory
                     }.toSet().forEach {  binding.chips.addChip(requireContext(), it.toString())}
                 }
             }
