@@ -58,14 +58,15 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
                     adapter.submitList(list)
                     list.map { dish ->
                         dish.strCategory
-                    }.toSet().forEach {  binding.chips.addChip(requireContext(), it.toString())}
+                    }.toSet().forEach { binding.chips.addChip(requireContext(), it.toString()) }
                 }
             }
         }
+        binding.chips.setOnCheckedStateChangeListener { group, checkedIds -> }
     }
 
     private fun ChipGroup.addChip(context: Context, title: String) {
-        Chip(context,null, R.attr.CustomChipChoiceStyle).apply {
+        val chip = Chip(context, null, R.attr.CustomChipChoiceStyle).apply {
             id = View.generateViewId()
             text = title
             isClickable = true
@@ -74,6 +75,13 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
             isCheckedIconVisible = false
             isFocusable = true
             addView(this)
+        }
+        chip.setOnCheckedChangeListener { _, b ->
+            if (b) {
+                viewModel.addTag(chip.text.toString())
+            } else{
+                viewModel.removeTag(chip.text.toString())
+            }
         }
     }
 

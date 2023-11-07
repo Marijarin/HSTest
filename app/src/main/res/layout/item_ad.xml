@@ -9,5 +9,6 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:src="@drawable/ad1"/>
+        android:contentDescription="@null"
+        tools:src="@drawable/ad1" />
 </LinearLayout>

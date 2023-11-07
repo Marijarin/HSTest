@@ -10,16 +10,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp">
+        android:layout_marginStart="@dimen/common_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:paddingTop="@dimen/common_margin"
+        android:paddingBottom="@dimen/common_margin">
 
         <ImageView
             android:id="@+id/dishImage"
+            android:contentDescription="@null"
             android:layout_width="135dp"
             android:layout_height="135dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/dishDesc"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@sample/dish.json/dish/image_url" />
 
